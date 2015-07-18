@@ -16,17 +16,20 @@
 	$dirName = 'galeria';
 	$d = opendir($dirName);
 	$ignore = array('.', '..');
+	$nameToShow = "";
+	$sizes = array('200', '400', '350', '800', '90', '500');
 	while ($f = readdir($d)):
-		if (!in_array($f, $ignore) && !is_dir($dirName.'/'.$f)): ?>
+		if (!in_array($f, $ignore) && !is_dir($dirName.'/'.$f)): 
+		 $nameToShow = explode ('.', $f); ?>
 			<article>
 				<figure>
 					<a href="galeria/grandes/<?php echo $f; ?>">
 						<!-- :before -->
-						<img src="galeria/<?php echo $f; ?>" alt="<?php echo $f;?>">
+						<img <?php shuffle($sizes);?> style="width: <?php echo $sizes[0]; ?>px" src="galeria/<?php echo $f; ?>" alt="<?php echo $f;?>">
 						<!-- :after -->
 					</a>
 				</figure>
-				<h2><?php echo $f;?></h2>
+				<h2><?php echo $nameToShow[0];?></h2>
 				<div>Electronica </div>
 			</article>
 <?php		

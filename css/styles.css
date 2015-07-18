@@ -30,6 +30,10 @@ article {
 	margin-bottom: 30px;
 }
 
+article:nth-of-type(3n+1) {
+	clear: both;
+}
+
 figure {
 	margin: 0;
 }
