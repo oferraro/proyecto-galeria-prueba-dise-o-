@@ -25,10 +25,15 @@
 
 <section class="slider">
 	<ul class="bxslider">
-	  <li><img src="galeria/auricular1.jpg" title="Funky roots" /></li>
-	  <li><img src="galeria/camara2.jpg" title="The long and winding road" /></li>
-	  <li><img src="galeria/camara3.jpg" title="The long and winding road" /></li>
+	  <li><img src="galeria/auricular1.jpg" title="Text 1" /></li>
+	  <li><img src="galeria/camara2.jpg" width="300" title="Text" /></li>
+	  <li><img src="galeria/camara3.jpg" title="Text 3" /></li>
 	</ul>
+	<div id="bx-pager">
+	  <a data-slide-index="0" href=""><img src="galeria/auricular1.jpg" /></a>
+	  <a data-slide-index="1" href=""><img src="galeria/camara2.jpg" /></a>
+	  <a data-slide-index="2" href=""><img src="galeria/camara3.jpg" /></a>
+	</div>
 
 </section>
 
@@ -96,18 +101,25 @@
 	
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(".fancybox").fancybox();
+		$(".fancybox").fancybox({
+			padding: 0
+		});
 		$('#gallery-mixit').mixItUp();
 	});	
 	
 	
 var slider = $('.bxslider').bxSlider({
+	adaptiveHeight: true,
+	pagerCustom: '#bx-pager',
 	mode: 'horizontal',
-	speed: 50,
+	speed: 2000,
 	autoStart: true,
 	pager: true,
 	infiniteLoop: true,
 	auto: true,	
+	autoControls: true,
+	pause: 1000,
+	captions: true
 });
 
 $('#reload-slider').click(function(e){

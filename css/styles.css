@@ -100,11 +100,12 @@ figure a:hover:after {
 	display: none;
 }
 
-.bxslider img {
-	position: relative;
-	left: 50%;	
-	margin-left: -150px;
-	width: 300px;
+#bx-pager img {
+	width: 100px;
+}
+
+.bx-caption {
+	line-height: 25px;
 }
 
 @media screen and (max-width: 700px) {
