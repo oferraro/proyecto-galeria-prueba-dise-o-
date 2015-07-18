@@ -11,6 +11,12 @@ section {
 	text-align: center;
 }
 
+section:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 h1 {
 	padding: 20px;
 	background: #ddd;
@@ -19,6 +25,9 @@ h1 {
 article {
 	outline: 1px dotted red;
 	width: 250px;
+	float: left;
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 figure {
@@ -26,18 +35,53 @@ figure {
 }
 
 figure a {
+	text-decoration: none;
 	position: relative;
 	display: block;
+	overflow: hidden;
+	transition: all 0.3s linear;
 }
 
 figure a:before {
-	content: '+';
+	content: '';
 	display: block; 
-	background: rgba(0,128,255,0.5);
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 5;
+}
+
+figure a:hover:before {
+	background: rgba(0,128,255,0.5);
+	transition: all 0.3s linear;
 }
 
 figure img {
 	display: block;
+	z-index: 3;
+	transition: all 0.3s linear;
+}
+
+figure a:hover img {
+	transform: rotate(15deg) scale(1.35);
+}
+
+figure a:after {
+	position: absolute;
+	top: -50px; left: 50%;
+	z-index: 7;
+	content: "\f00e";
+	font-family: 'FontAwesome';
+	font-size: 60px;
+	margin-left: -30px;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	color: silver;
+	transition: all 0.3s linear;
+	text-shadow: 1px 1px 1px #222;
+}
+
+figure a:hover:after {
+	top: 50%;
 }
