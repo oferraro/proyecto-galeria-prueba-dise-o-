@@ -10,3 +10,34 @@ section {
 	margin: 30px auto;
 	text-align: center;
 }
+
+h1 {
+	padding: 20px;
+	background: #ddd;
+}
+
+article {
+	outline: 1px dotted red;
+	width: 250px;
+}
+
+figure {
+	margin: 0;
+}
+
+figure a {
+	position: relative;
+	display: block;
+}
+
+figure a:before {
+	content: '+';
+	display: block; 
+	background: rgba(0,128,255,0.5);
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
+figure img {
+	display: block;
+}

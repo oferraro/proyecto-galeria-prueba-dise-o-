@@ -14,7 +14,9 @@
 		<article>
 			<figure>
 				<a href="galeria/grandes/auricular1.jpg">
+					<!-- :before -->
 					<img src="galeria/auricular1.jpg" alt="auricular">
+					<!-- :after -->
 				</a>
 			</figure>
 			<h2>Auricular</h2>
