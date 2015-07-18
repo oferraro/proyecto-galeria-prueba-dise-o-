@@ -1,0 +1,12 @@
+body {
+	background: silver;
+	font-family: arial;
+	font-size: 14px;
+}
+
+section {
+	width: 870px;
+	background: #fff;
+	margin: 30px auto;
+	text-align: center;
+}
